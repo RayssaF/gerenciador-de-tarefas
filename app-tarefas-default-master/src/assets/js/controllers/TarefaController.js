@@ -20,9 +20,38 @@ class TarefaController {
   carregarFormulario(){
     
     // Mostra o formulário
-    $('#modal').modal('show')
+    $('#modalTarefa').modal('show')
+  }
+  trocarModalEditar(){
+    const modalTarefa = document.querySelector('#tituloModalTarefa')
+    modalTarefa.innerText = 'Editar Tarefa'
+  }
+  trocarModalSalvar(){
+    const modalTarefa = document.querySelector('#tituloModalTarefa')
+    modalTarefa.innerText = 'Inserir tarefa'
   }
 
+  
+  
+  editar(Descricao,Data,Categoria,Prioridade){
+    console.log(Data)
+    console.log(Descricao)
+    console.log(Categoria)
+    const data = document.querySelector('#dataTarefa')
+    data.value = Data
+    
+
+    const descricao = document.querySelector('#descricaoTarefa')
+    descricao.value = Descricao
+
+    
+
+    const categoria = document.querySelector('#categoriaTarefa')
+    categoria.value = Categoria
+
+    const prioridade = document.querySelector('#prioridadeTarefa')
+    prioridade.value = Prioridade
+  }
   inserir(){
     
     // Capturar os dados
